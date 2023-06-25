@@ -2,16 +2,21 @@
 
 :root {
     --dark_blue: #23294e;
-    --dark: #131521;
-    --blue: #1c63cd;
-    --yellow: #eccb11;
-    --white: #f1f1f1;
-
+    --dark: #0c1f22;
+    --blue: #0aa2ba;
+    --yellow: #fff700;
+    --white: #ffffff;
+    --glass: #62b2d571;
 }
 
 body {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-image: url(./images/background-image-mobile.jpg);
+    background-size: cover;
     font-family: 'DM Sans', sans-serif;
+    overflow-x: unset;
 }
 
 header .institute {
@@ -19,17 +24,17 @@ header .institute {
     background-color: #f1f1f1;
     padding: .75rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 header .institute img {
-    width: 25%;
+    width: 5rem;
     margin: .25rem;
 }
 
-header .institute h1{
+header .institute h1 {
     font-family: 'Agdasima', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 header .subtitle {
@@ -37,16 +42,18 @@ header .subtitle {
     margin: 0;
     color: var(--white);
     padding: 1.5rem .75rem 1.5rem .75rem;
+    text-align: center;
 }
 
 header .subtitle span {
     color: var(--yellow);
     padding: .25rem;
+    font-size: 1.75rem;
+    text-transform: uppercase;
 }
 
 main {
-    background-image: url(./images/abstract-art-colorful-colors.jpg);
-    background-size: cover;
+    margin-bottom: 15%;
 }
 
 main .intro {
@@ -54,7 +61,8 @@ main .intro {
 }
 
 main .intro p{
-    color: var(--white);
+    color: var(--dark);
+    font-weight: bold;
     font-size: 1.15rem;
     line-height: 1.4rem;
     margin-bottom: 1rem;
@@ -71,6 +79,8 @@ main img {
 main ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin-top: 1rem;
+    padding: 1rem;
 }
 
 main ul li {
@@ -81,7 +91,7 @@ main ul li {
     margin: .75rem; 
     font-weight: bold;
     font-size: 1.75rem;
-    background-color: var(--blue);
+    background-image: linear-gradient(45deg, var(--dark_blue), var(--blue));
     color: var(--yellow);
 
     display: flex;
@@ -97,17 +107,26 @@ footer {
     color: var(--white);
 }
 
+/*Mobile*/
+
+@media screen and (min-width: 600px) {
+    main ul {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 @media screen and (min-width: 800px) {
     header .institute {
         padding: 1rem;
     }
 
     header .institute h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
     
     header .institute img {
-        width: 20%;
+        width: 6rem;
     }
     
     header .subtitle {
@@ -117,14 +136,10 @@ footer {
 
     main .intro {
         padding: 2rem 2rem 0 2rem;   
-       }
+    }
        
     main .intro p{
         font-size: 1.25rem;
-    }
-
-    main {
-        padding-bottom: 26%;
     }
 
     main .cefaleia-types {
@@ -136,11 +151,6 @@ footer {
         border-radius: .5rem;
     }
     
-    main ul {
-        display: flex;
-        justify-content: center;
-    }
-
     main ul li {
         font-size: 2rem;
         transition: .25s;
@@ -152,17 +162,31 @@ footer {
     }
 }
 
+/*Kindle*/
+
+@media screen and (min-width: 800px) and (min-height: 1200px) and (max-height: 1300px) {
+    main {
+        margin-bottom: 35%;
+    }
+}
+
+/*Desktop*/
+
 @media screen and (min-width: 1000px) {
     body {
-        background-color: var(--dark);
-    }
-    
-    main {
-        width: 85%;
-        margin: auto;
+        background-image: url(./images/background-image-desktop.jpg);
     }
 
-    
+    main {
+        width: 80%;
+        margin: auto;
+        background-color: var(--glass);
+    }
+
+    main .intro {
+        padding: 2rem 3rem 0 3rem;
+    }
+
     main ul li {
         width: 5rem;
         height: 5rem;
@@ -175,11 +199,11 @@ footer {
     }
     
     header .institute h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     
     header .institute img {
-        width: 10%;
+        width: 8rem;
     }
     
     header .subtitle {
@@ -189,9 +213,8 @@ footer {
     }
     
     main {
-        width: 65%;
+        width: 70%;
         margin: auto;
-        padding-bottom: 10%;
     }
 
     main .cefaleia-types {
