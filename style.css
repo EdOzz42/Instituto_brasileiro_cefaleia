@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    --dark_blue: #23294e;
+    --dark: #131521;
+    --blue: #1c63cd;
+    --yellow: #eccb11;
+    --white: #f1f1f1;
+
+}
+
+body {
+    height: 100%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+header .institute {
+    display: flex;
+    background-color: #f1f1f1;
+    padding: .75rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .institute img {
+    width: 25%;
+    margin: .25rem;
+}
+
+header .institute h1{
+    font-family: 'Agdasima', sans-serif;
+    font-size: 1.5rem;
+}
+
+header .subtitle {
+    background-image: linear-gradient(0deg, var(--blue), var(--dark_blue));
+    margin: 0;
+    color: var(--white);
+    padding: 1.5rem .75rem 1.5rem .75rem;
+}
+
+header .subtitle span {
+    color: var(--yellow);
+    padding: .25rem;
+}
+
+main {
+    background-image: url(./images/abstract-art-colorful-colors.jpg);
+    background-size: cover;
+}
+
+main .intro {
+    padding: 1rem .75rem 0 .75rem;
+}
+
+main .intro p{
+    color: var(--white);
+    font-size: 1.15rem;
+    line-height: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+main .cefaleia-types {
+    padding: 1rem 0;
+}
+
+main img {
+    width: 100%
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+main ul li {
+    list-style: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: .75rem; 
+    font-weight: bold;
+    font-size: 1.75rem;
+    background-color: var(--blue);
+    color: var(--yellow);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-image: linear-gradient(90deg, var(--dark_blue), var(--blue));
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 1.5rem 0;
+    color: var(--white);
+}
+
+@media screen and (min-width: 800px) {
+    header .institute {
+        padding: 1rem;
+    }
+
+    header .institute h1 {
+        font-size: 2rem;
+    }
+    
+    header .institute img {
+        width: 20%;
+    }
+    
+    header .subtitle {
+        padding: 2rem 1rem;
+        font-size: 1.75rem;
+    }
+
+    main .intro {
+        padding: 2rem 2rem 0 2rem;   
+       }
+       
+    main .intro p{
+        font-size: 1.25rem;
+    }
+
+    main {
+        padding-bottom: 26%;
+    }
+
+    main .cefaleia-types {
+        width: 90%;
+        margin: auto;
+    }
+
+    main img {
+        border-radius: .5rem;
+    }
+    
+    main ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    main ul li {
+        font-size: 2rem;
+        transition: .25s;
+    }
+
+    main ul li:hover {
+        scale: 1.15;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: var(--dark);
+    }
+    
+    main {
+        width: 85%;
+        margin: auto;
+    }
+
+    
+    main ul li {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header .institute {
+        padding: 1.5rem;
+    }
+    
+    header .institute h1 {
+        font-size: 2rem;
+    }
+    
+    header .institute img {
+        width: 10%;
+    }
+    
+    header .subtitle {
+        padding: 3rem 1.5rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    main {
+        width: 65%;
+        margin: auto;
+        padding-bottom: 10%;
+    }
+
+    main .cefaleia-types {
+        width: 85%;
+        margin: auto;
+    }
+}
